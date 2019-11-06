@@ -57,23 +57,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgU-zG-px6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="871"/>
+            <point key="canvasLocation" x="2309" y="138"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contact List-->
         <scene sceneID="VwM-gH-fkP">
             <objects>
-                <tableViewController id="RGR-Nw-KwF" sceneMemberID="viewController">
+                <tableViewController id="RGR-Nw-KwF" customClass="ShowContactViewController" customModule="Telegramme" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ume-hZ-Yg7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GPW-Th-7M2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="f7h-rc-3AQ" detailTextLabel="6ME-O6-djw" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="GPW-Th-7M2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GPW-Th-7M2" id="dT7-cu-uTa">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f7h-rc-3AQ">
+                                            <rect key="frame" x="20" y="16" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ME-O6-djw">
+                                            <rect key="frame" x="20" y="39.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -82,11 +98,11 @@
                             <outlet property="delegate" destination="RGR-Nw-KwF" id="Ykz-kC-kKU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="U9J-DP-Cel"/>
+                    <navigationItem key="navigationItem" title="Contact List" id="U9J-DP-Cel"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmG-Ne-VNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="138"/>
+            <point key="canvasLocation" x="1489.8550724637682" y="870.53571428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vKn-SC-gi1">
@@ -118,7 +134,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="RGR-Nw-KwF" kind="relationship" relationship="rootViewController" id="sES-Zf-nfH"/>
+                        <segue destination="8mZ-bS-7l0" kind="relationship" relationship="rootViewController" id="Gyx-aK-0ft"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQU-oZ-53A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +153,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8mZ-bS-7l0" kind="relationship" relationship="rootViewController" id="13V-Og-v0w"/>
+                        <segue destination="RGR-Nw-KwF" kind="relationship" relationship="rootViewController" id="AId-K4-DRs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76D-1G-3Jo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

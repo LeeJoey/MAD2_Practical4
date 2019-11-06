@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870099052372A35B00DFD46C /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870099042372A35B00DFD46C /* ShowContactViewController.swift */; };
 		87DC527023701E1100D7979C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC526F23701E1100D7979C /* AppDelegate.swift */; };
 		87DC527223701E1100D7979C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC527123701E1100D7979C /* SceneDelegate.swift */; };
 		87DC527423701E1100D7979C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC527323701E1100D7979C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 		87DC529223701E1300D7979C /* TelegrammeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC529123701E1300D7979C /* TelegrammeUITests.swift */; };
 		87DC52A02370236B00D7979C /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DC529F2370236B00D7979C /* Content.storyboard */; };
 		87DC52A623702AEF00D7979C /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC52A523702AEF00D7979C /* AddContactViewController.swift */; };
+		87F7F3BD23729A3C0084A8E7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7F3BC23729A3C0084A8E7 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		870099042372A35B00DFD46C /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
 		87DC526C23701E1100D7979C /* Telegramme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telegramme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DC526F23701E1100D7979C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87DC527123701E1100D7979C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		87DC529323701E1300D7979C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87DC529F2370236B00D7979C /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		87DC52A523702AEF00D7979C /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		87F7F3BC23729A3C0084A8E7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,6 @@
 		87DC526323701E1100D7979C = {
 			isa = PBXGroup;
 			children = (
-				87DC52A523702AEF00D7979C /* AddContactViewController.swift */,
 				87DC526E23701E1100D7979C /* Telegramme */,
 				87DC528523701E1300D7979C /* TelegrammeTests */,
 				87DC529023701E1300D7979C /* TelegrammeUITests */,
@@ -104,6 +107,8 @@
 		87DC526E23701E1100D7979C /* Telegramme */ = {
 			isa = PBXGroup;
 			children = (
+				87DC52A523702AEF00D7979C /* AddContactViewController.swift */,
+				870099042372A35B00DFD46C /* ShowContactViewController.swift */,
 				87DC526F23701E1100D7979C /* AppDelegate.swift */,
 				87DC527123701E1100D7979C /* SceneDelegate.swift */,
 				87DC527323701E1100D7979C /* ViewController.swift */,
@@ -112,6 +117,7 @@
 				87DC527823701E1300D7979C /* Assets.xcassets */,
 				87DC527A23701E1300D7979C /* LaunchScreen.storyboard */,
 				87DC527D23701E1300D7979C /* Info.plist */,
+				87F7F3BC23729A3C0084A8E7 /* Contact.swift */,
 			);
 			path = Telegramme;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			files = (
 				87DC527423701E1100D7979C /* ViewController.swift in Sources */,
 				87DC52A623702AEF00D7979C /* AddContactViewController.swift in Sources */,
+				87F7F3BD23729A3C0084A8E7 /* Contact.swift in Sources */,
 				87DC527023701E1100D7979C /* AppDelegate.swift in Sources */,
+				870099052372A35B00DFD46C /* ShowContactViewController.swift in Sources */,
 				87DC527223701E1100D7979C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
