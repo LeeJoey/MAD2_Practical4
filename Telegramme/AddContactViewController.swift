@@ -27,13 +27,13 @@ class AddContactViewController: UIViewController {
     }
     
     @IBAction func createBtn(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print(String(appDelegate.contactList.count))
         
-        let c = Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
-        appDelegate.contactList.append(c)
-        
-        //self.performSegue(withIdentifier: "ContactCell", sender: self)
+        if firstNameFld.text != "" && lastNameFld.text != "" && mobileFld.text != "" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            print(String(appDelegate.contactList.count))
+            
+            let c = Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
+            appDelegate.contactList.append(c)
         }
     }
     
@@ -47,3 +47,4 @@ class AddContactViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}

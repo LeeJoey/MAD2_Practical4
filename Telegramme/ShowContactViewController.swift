@@ -10,10 +10,6 @@ import UIKit
 
 class ShowContactViewController: UITableViewController {
     
-//    var firstNameFld: String?
-//    var lastNameFld: String?
-//    var mobileFld: String?
-    
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -22,6 +18,8 @@ class ShowContactViewController: UITableViewController {
         // Do any additional setup after loading the view.
         print("View did load")
         self.tableView.reloadData() //refresh data
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,29 +36,27 @@ class ShowContactViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
         
         let contact = appDelegate.contactList[indexPath.row]
         cell.textLabel!.text = "\(contact.firstName) \(contact.lastName)"
         cell.detailTextLabel!.text = "\(contact.mobileNo)"
         return cell
-        
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "ContactCell"){
-//            let showContact = segue.destination as! ShowContactViewController
-//            showContact = appDelegate
-//        }
-//    }
-}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            appDelegate.contactList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ContactCell" {
+            let updateContact = segue.destination as! UpdateContactController
+            updateContact.rowSelected = tableView.indexPathForSelectedRow?.row
+        }
+    }
+}
